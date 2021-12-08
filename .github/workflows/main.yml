@@ -27,4 +27,4 @@ jobs:
           git config user.name "${{ github.event_name }}"
           git fetch origin main
           git tag `echo '${{ steps.vertag.outputs.vertag }}'`
-          git push origin `echo '${{ steps.vertag.outputs.vertag }}'`
+          git push --tags
